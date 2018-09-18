@@ -45,7 +45,7 @@ public class Slingshot : MonoBehaviour {
         projectileRigidbody.isKinematic = true;
     }
 
-    private void Update()
+    void Update()
     {
         if (!aimingMode) return;
 
@@ -70,6 +70,7 @@ public class Slingshot : MonoBehaviour {
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
+            FollowCam.POI = projectile;
             projectile = null;
         }
     }
