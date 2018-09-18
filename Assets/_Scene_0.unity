@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62913958}
   - component: {fileID: 62913957}
+  - component: {fileID: 62913959}
   m_Layer: 0
   m_Name: Slingshot
   m_TagString: Untagged
@@ -158,6 +159,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!114 &62913959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 62913956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c284fc75f8f8449813dcf07d5f820b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 1000203911767246, guid: 73d34c6a85240c746a6449dde1927bc5,
+    type: 2}
+  launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &103040167
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,12 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b90a9aef1782b4dafa7ff102497b6647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 149266, guid: 89c4b82fdfdab2e4890f0f755f21aae5, type: 2}
-  velocityMult: 10
-  launchPoint: {fileID: 0}
-  launchPos: {x: 0, y: 0, z: 0}
-  projectile: {fileID: 149266, guid: 89c4b82fdfdab2e4890f0f755f21aae5, type: 2}
-  aimingMode: 0
 --- !u!1 &737611854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,9 +1131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86abdf47f7f02487aab7fb7f3db9b170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  easing: 0.05
-  minXY: {x: 0, y: 0}
-  camZ: 0
 --- !u!114 &1379229832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,21 +1142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e4de208c0874b0483735d6b802e5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uitLevel: {fileID: 699543261}
-  uitShots: {fileID: 1665489584}
-  uitButton: {fileID: 802696816}
-  castlePos: {x: 50, y: -9.5, z: 0}
-  castles:
-  - {fileID: 1003559516747998, guid: 3d33e9cba7ae74db893fafc3b39c5fde, type: 2}
-  - {fileID: 1003559516747998, guid: 8751fc2ca45774f51bbd81274797e5e4, type: 2}
-  - {fileID: 1170044276797956, guid: 6c4af00388c9f40c2b5337f2972efc50, type: 2}
-  - {fileID: 1963813158455936, guid: 1ddcf4185600a41de8395be2e01fe9fd, type: 2}
-  level: 0
-  levelMax: 0
-  shotsTaken: 0
-  castle: {fileID: 0}
-  mode: 0
-  showing: Show Slingshot
 --- !u!1 &1665489582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3590cb5f2ce4106bc9ab122ee21734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDist: 0.1
 --- !u!120 &1764701858
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1703,6 +1696,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1959625832}
+  - component: {fileID: 1959625833}
   m_Layer: 0
   m_Name: LaunchPoint
   m_TagString: Untagged
@@ -1723,6 +1717,17 @@ Transform:
   m_Father: {fileID: 62913958}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!122 &1959625833
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959625831}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4290756543
+  m_Size: 3
 --- !u!1 &2047531802
 GameObject:
   m_ObjectHideFlags: 0
