@@ -97,16 +97,17 @@ public class ProjectileLine : MonoBehaviour {
                 {
                     return;
                 }
-                else 
-                {
-                    return;
-                }
+            }
+            else
+            {
+                return;
+            }
+         AddPoint();
+            if (FollowCam.POI == null)
+            {
+                poi = null;
             }
         }
-        AddPoint();
-        if (FollowCam.POI == null)
-        {
-            poi = null;
-        }
+        
     }
 }
